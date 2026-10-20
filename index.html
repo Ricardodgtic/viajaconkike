@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Viaja Simple: encontrá tu próximo destino y pedí una propuesta de viaje personalizada.">
+  <title>Viaja Simple | Tu próximo viaje empieza acá</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#inicio" aria-label="Viaja Simple, inicio">✈️ Viaja Simple</a>
+    <nav aria-label="Navegación principal">
+      <a href="#destinos">Destinos</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">TU PRÓXIMA AVENTURA TE ESPERA</p>
+        <h1>El mundo es grande.<br><span>Hagamos tu viaje realidad.</span></h1>
+        <p>Te ayudamos a organizar una experiencia a tu medida, desde una escapada hasta esas vacaciones que venís soñando.</p>
+        <a class="button button-primary" href="#destinos">Explorar destinos</a>
+      </div>
+    </section>
+
+    <section class="section" id="destinos">
+      <div class="section-heading">
+        <p class="eyebrow">INSPIRACIÓN PARA VIAJAR</p>
+        <h2>Destinos destacados</h2>
+        <p>Algunas ideas para empezar a planear tu próxima aventura.</p>
+      </div>
+      <div class="destination-grid">
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=900&q=80" alt="Vista panorámica de Río de Janeiro">
+          <div class="card-content">
+            <span class="tag">Brasil</span>
+            <h3>Río de Janeiro</h3>
+            <p>Playas, paisajes increíbles y energía brasileña.</p>
+            <button class="text-button" data-destination="Río de Janeiro">Consultar viaje →</button>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1544986581-efac024faf62?auto=format&fit=crop&w=900&q=80" alt="Playa y mar turquesa en un destino tropical">
+          <div class="card-content">
+            <span class="tag">Caribe</span>
+            <h3>Playas del Caribe</h3>
+            <p>Descanso, aguas cristalinas y días sin apuro.</p>
+            <button class="text-button" data-destination="Playas del Caribe">Consultar viaje →</button>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=80" alt="Casas coloridas junto al mar en la costa italiana">
+          <div class="card-content">
+            <span class="tag">Europa</span>
+            <h3>Italia</h3>
+            <p>Ciudades con historia, gastronomía y cultura.</p>
+            <button class="text-button" data-destination="Italia">Consultar viaje →</button>
+          </div>
+        </article>
+      </div>
+      <p class="note">Los destinos son ejemplos ilustrativos. Consultá disponibilidad y tarifas vigentes.</p>
+    </section>
+
+    <section class="services-section" id="servicios">
+      <div class="section service-intro">
+        <p class="eyebrow">VIAJÁ CON TRANQUILIDAD</p>
+        <h2>Nos ocupamos de los detalles</h2>
+        <p>Te acompañamos para que puedas concentrarte en disfrutar.</p>
+      </div>
+      <div class="service-list">
+        <div class="service-item"><span>✈️</span><div><h3>Vuelos y traslados</h3><p>Alternativas para llegar a destino de forma cómoda.</p></div></div>
+        <div class="service-item"><span>🏨</span><div><h3>Alojamiento</h3><p>Opciones según tus gustos, fechas y presupuesto.</p></div></div>
+        <div class="service-item"><span>🧭</span><div><h3>Viajes personalizados</h3><p>Propuestas pensadas para vos y tus acompañantes.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="section-heading">
+        <p class="eyebrow">EMPECEMOS A PLANEAR</p>
+        <h2>Contanos qué viaje imaginás</h2>
+        <p>Completá el formulario y prepararemos un mensaje para que nos contactes.</p>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <label for="name">Tu nombre</label>
+        <input id="name" name="name" type="text" placeholder="¿Cómo te llamás?" required>
+        <label for="destination">Destino de interés</label>
+        <input id="destination" name="destination" type="text" placeholder="Ej.: Río de Janeiro" required>
+        <div class="form-row">
+          <div>
+            <label for="date">Fecha aproximada</label>
+            <input id="date" name="date" type="month">
+          </div>
+          <div>
+            <label for="travelers">Cantidad de viajeros</label>
+            <select id="travelers" name="travelers">
+              <option value="1 persona">1 persona</option>
+              <option value="2 personas" selected>2 personas</option>
+              <option value="3 a 4 personas">3 a 4 personas</option>
+              <option value="5 personas o más">5 personas o más</option>
+            </select>
+          </div>
+        </div>
+        <label for="details">¿Algo más que debamos saber?</label>
+        <textarea id="details" name="details" rows="3" placeholder="Presupuesto aproximado, tipo de viaje, consultas..."></textarea>
+        <button class="button button-primary" type="submit">Preparar consulta</button>
+        <p class="form-help">Este formulario no envía datos a un servidor: abre WhatsApp con el mensaje listo para enviar.</p>
+        <p id="form-status" class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="logo" href="#inicio">✈️ Viaja Simple</a>
+    <p>Tu próximo viaje empieza con una buena idea.</p>
+    <p class="copyright">© <span id="year"></span> Viaja Simple · Sitio demostrativo</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
